@@ -33,6 +33,14 @@ const config = {
         deduped.push(designTokenManager);
         return deduped;
     },
+    "webpackFinal": async (config) => {
+        if (config?.plugins) {
+            config.plugins = config.plugins.filter(
+                (plugin) => plugin?.constructor?.name !== "ESLintWebpackPlugin"
+            );
+        }
+        return config;
+    },
     "framework": {
         "name": "@storybook/react-webpack5",
         "options": {}

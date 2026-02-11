@@ -1,7 +1,33 @@
 /** @type { import('@storybook/react-webpack5').Preview } */
+import React, { useEffect } from 'react';
 import './preview.css';
+import anthemRootTokens from '!!raw-loader!../src/design-tokens/anthem/root.css';
+
+const ROOT_BRAND_TOKENS = {
+  anthem: anthemRootTokens,
+  healthyblue: anthemRootTokens,
+  wellpoint: anthemRootTokens,
+};
+
+const withBrandRootTokens = (Story, context) => {
+  const brand = context?.args?.brand ?? 'anthem';
+
+  useEffect(() => {
+    const css = ROOT_BRAND_TOKENS[brand] ?? ROOT_BRAND_TOKENS.anthem;
+    let tag = document.getElementById('dynamic-brand-root-styles');
+    if (!tag) {
+      tag = document.createElement('style');
+      tag.id = 'dynamic-brand-root-styles';
+      document.head.appendChild(tag);
+    }
+    tag.textContent = css;
+  }, [brand]);
+
+  return <Story />;
+};
 
 const preview = {
+  decorators: [withBrandRootTokens],
   parameters: {
     controls: {
       matchers: {
