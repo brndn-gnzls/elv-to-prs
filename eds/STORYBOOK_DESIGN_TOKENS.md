@@ -13,7 +13,7 @@ Key outcomes:
 - Brand primitives are injected globally so controls (size, variant, disabled, etc.) render correctly.
 - Build no longer fails from ESLint warnings in Storybook.
 
-## Current Versions
+## Current Dependencies with Versions
 
 In `package.json`:
 - `storybook`: `10.2.8`
