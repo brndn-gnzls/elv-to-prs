@@ -34,6 +34,8 @@ export default {
     title: 'Components/ButtonGroup',
     component: ButtonGroup,
     parameters: {
+
+        designToken: { tabs: ["ButtonGroup (Anthem)"] },
         controls: { include: ['brand'] },
         actions: { disable: true },
         docs: { disable: true },

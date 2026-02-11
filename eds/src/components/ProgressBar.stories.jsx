@@ -65,6 +65,8 @@ export default {
     title: 'Components/ProgressBar',
     component: ProgressBar,
     parameters: {
+
+        designToken: { tabs: ["ProgressBar (Anthem)"] },
         controls: { include: ['brand', 'variant', 'value', 'currentLabel', 'inactiveLabel'] },
         actions: { disable: true },
         docs: { disable: true },

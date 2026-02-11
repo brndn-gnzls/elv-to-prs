@@ -77,6 +77,8 @@ export default {
     title: 'Components/Checkbox',
     component: Checkbox,
     parameters: {
+
+        designToken: { tabs: ["Checkbox (Anthem)"] },
         controls: { include: ['brand', 'checked', 'disabled', 'error', 'focusActive', 'label', 'errorMessage'] },
         actions: { disable: true },
         a11y: { disable: true },

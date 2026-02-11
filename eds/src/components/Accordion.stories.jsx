@@ -18,12 +18,8 @@ export default {
     title: 'Components/Accordion',
     component: Accordion,
     parameters: {
-        designToken: {
-            files: [
-                "../src/design-tokens/anthem/accordion.tokens.css"
-            ],
-            override: true
-        },
+
+        designToken: { tabs: ["Accordion (Anthem)"] },
         controls: { include: ['brand'] },
         actions: { disable: true },
         docs: { disable: true },

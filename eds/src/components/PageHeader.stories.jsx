@@ -91,6 +91,8 @@ export default {
     title: 'Components/PageHeader',
     component: PageHeader,
     parameters: {
+
+        designToken: { tabs: ["PageHeader (Anthem)"] },
         controls: { include: ['brand', 'mode', 'memberName'] },
         actions: { disable: true },
         docs: { disable: true },

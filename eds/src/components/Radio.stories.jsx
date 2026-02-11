@@ -74,6 +74,8 @@ export default {
     title: 'Components/Radio',
     component: RadioGroup,
     parameters: {
+
+        designToken: { tabs: ["Radio (Anthem)"] },
         controls: { include: ['brand', 'disabled', 'error'] },
         actions: { disable: true },
         docs: { disable: true },

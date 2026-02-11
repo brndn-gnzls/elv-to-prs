@@ -42,6 +42,8 @@ export default {
     title: 'Components/Tooltip',
     component: Tooltip,
     parameters: {
+
+        designToken: { tabs: ["Tooltip (Anthem)"] },
         controls: { include: ['brand', 'text', 'open'] },
         actions: { disable: true },
         docs: { disable: true },

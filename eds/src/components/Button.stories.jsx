@@ -157,6 +157,8 @@ export default {
     title: 'Components/Button',
     component: Button,
     parameters: {
+
+        designToken: { tabs: ["Button (Anthem)"] },
         controls: { include: ['brand', 'variant', 'size', 'disabled', 'children'] },
         actions: { disable: true },
         a11y: { disable: true },

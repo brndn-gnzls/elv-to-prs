@@ -122,6 +122,8 @@ export default {
     title: 'Components/Tabs',
     component: Tabs,
     parameters: {
+
+        designToken: { tabs: ["Tabs (Anthem)"] },
         controls: { include: ['brand', 'variant', 'disabled'] },
         actions: { disable: true },
         docs: { disable: true },

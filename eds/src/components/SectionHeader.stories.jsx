@@ -55,6 +55,8 @@ export default {
     title: 'Components/SectionHeader',
     component: SectionHeader,
     parameters: {
+
+        designToken: { tabs: ["SectionHeader (Anthem)"] },
         controls: { include: ['brand', 'mode', 'title', 'description'] },
         actions: { disable: true },
         docs: { disable: true },

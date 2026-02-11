@@ -46,6 +46,8 @@ export default {
     title: 'Components/SlideIn',
     component: SlideIn,
     parameters: {
+
+        designToken: { tabs: ["SlideIn (Anthem)"] },
         controls: { include: ['brand', 'open', 'title'] },
         actions: { disable: true },
         docs: { disable: true },

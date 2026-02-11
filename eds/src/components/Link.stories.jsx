@@ -97,6 +97,8 @@ export default {
     title: 'Components/Link',
     component: Link,
     parameters: {
+
+        designToken: { tabs: ["Link (Anthem)"] },
         controls: { include: ['brand', 'variant', 'disabled', 'children'] },
         actions: { disable: true },
         a11y: { disable: true },

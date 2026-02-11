@@ -139,6 +139,8 @@ export default {
     title: 'Components/BarGraph',
     component: BarGraph,
     parameters: {
+
+        designToken: { tabs: ["BarGraph (Anthem)"] },
         controls: { include: ['brand', 'variant', 'standardSegments', 'progress', 'milestoneSegments', 'title', 'description'] },
         actions: { disable: true },
         docs: { disable: true },

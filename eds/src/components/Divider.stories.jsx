@@ -31,6 +31,8 @@ export default {
     title: 'Components/Divider',
     component: Divider,
     parameters: {
+
+        designToken: { tabs: ["Divider (Anthem)"] },
         controls: { include: ['brand', 'fill', 'weight'] },
         actions: { disable: true },
         docs: { disable: true },

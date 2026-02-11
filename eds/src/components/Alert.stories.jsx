@@ -61,6 +61,8 @@ export default {
     title: 'Components/Alert',
     component: Alert,
     parameters: {
+
+        designToken: { tabs: ["Alert (Anthem)"] },
         controls: { include: ['brand', 'kind', 'children'] },
         actions: { disable: true },
         a11y: { disable: true },

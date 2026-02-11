@@ -33,6 +33,8 @@ export default {
     title: 'Components/Container',
     component: Container,
     parameters: {
+
+        designToken: { tabs: ["Container (Anthem)"] },
         controls: { include: ['brand', 'variant'] },
         actions: { disable: true },
         docs: { disable: true },

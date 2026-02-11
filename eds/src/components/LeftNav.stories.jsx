@@ -117,6 +117,8 @@ export default {
     title: 'Components/LeftNav',
     component: LeftNav,
     parameters: {
+
+        designToken: { tabs: ["LeftNav (Anthem)"] },
         controls: { include: ['brand'] },
         actions: { disable: true },
         docs: { disable: true },

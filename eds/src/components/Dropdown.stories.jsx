@@ -82,6 +82,8 @@ export default {
     title: 'Components/Dropdown',
     component: Dropdown,
     parameters: {
+
+        designToken: { tabs: ["Dropdown (Anthem)"] },
         controls: { include: ['brand', 'disabled', 'error', 'label', 'optionalText', 'placeholder'] },
         actions: { disable: true },
         a11y: { disable: true },

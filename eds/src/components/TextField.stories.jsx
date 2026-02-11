@@ -97,6 +97,8 @@ export default {
     title: 'Components/TextField',
     component: TextField,
     parameters: {
+
+        designToken: { tabs: ["TextField (Anthem)"] },
         controls: { include: ['brand', 'status', 'disabled', 'label', 'optionalText', 'placeholder'] },
         actions: { disable: true },
         docs: { disable: true },

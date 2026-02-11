@@ -29,6 +29,8 @@ export default {
     title: 'Components/TextColors',
     component: TextColors,
     parameters: {
+
+        designToken: { tabs: ["TextColors (Anthem)"] },
         controls: { include: ['brand'] },
         actions: { disable: true },
         docs: { disable: true },

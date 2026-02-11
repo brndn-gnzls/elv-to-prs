@@ -71,6 +71,8 @@ export default {
     title: 'Components/Toggle',
     component: Toggle,
     parameters: {
+
+        designToken: { tabs: ["Toggle (Anthem)"] },
         controls: { include: ['brand', 'checked', 'disabled', 'error', 'label', 'onText', 'offText', 'errorText'] },
         actions: { disable: true },
         docs: { disable: true },

@@ -41,6 +41,8 @@ export default {
     title: 'Components/Badge',
     component: Badge,
     parameters: {
+
+        designToken: { tabs: ["Badge (Anthem)"] },
         controls: { include: ['brand', 'variant', 'tone', 'children'] },
         actions: { disable: true },
         docs: { disable: true },
