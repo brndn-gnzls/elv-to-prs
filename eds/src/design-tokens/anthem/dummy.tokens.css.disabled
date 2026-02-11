@@ -1,0 +1,43 @@
+/**
+ * @tokens Dummy Color Tokens
+ * @presenter Color
+ */
+ :root {
+    /* Surface */
+    --dummy-surface-primary: #286ce2;
+    --dummy-surface-secondary: #2453a6;
+    --dummy-surface-tertiary: #0092fa;
+  
+    /* Neutral */
+    --dummy-neutral-white: #ffffff;
+    --dummy-neutral-black: #000000;
+    --dummy-neutral-gray: #888888;
+  
+    /* Text */
+    --dummy-text-heading: #333333;
+    --dummy-text-body: #666666;
+    --dummy-text-muted: #999999;
+  }
+  
+  /**
+   * @tokens Dummy Spacing Tokens
+   * @presenter Spacing
+   */
+  :root {
+    /* Spacing */
+    --dummy-spacing-sm: 4px;
+    --dummy-spacing-md: 8px;
+    --dummy-spacing-lg: 16px;
+    --dummy-spacing-xl: 32px;
+  }
+  
+  /**
+   * @tokens Dummy FontSize Tokens
+   * @presenter FontSize
+   */
+  :root {
+    --dummy-font-size-small: 12px;
+    --dummy-font-size-base: 16px;
+    --dummy-font-size-large: 24px;
+  }
+  
