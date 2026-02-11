@@ -1,0 +1,23 @@
+.buttongroup {
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    display: inline-flex;
+    gap: var(--primitives-spacing-4);              /* buttonGroup/padding/gap */
+    background: var(--semantic-btg-bg-container);  /* buttonGroup/background/container */
+    padding: var(--primitives-spacing-6) var(--primitives-spacing-3); /* v/h container */
+    border-radius: var(--primitives-border-radius-rounded); /* reasonable default */
+    /* box-shadow: 0 y blur color */
+    box-shadow:
+            0 var(--brand-btg-dropshadow-y)
+            var(--primitives-sizing-250)               /* buttonGroup/dropShadow/blur */
+            var(--brand-btg-dropshadow-bg);
+}
+
+/* Simple demo button styling (so you can see spacing/shadow) */
+.buttongroup__btn {
+    appearance: none;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+}

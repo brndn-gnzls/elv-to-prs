@@ -1,0 +1,113 @@
+.pageheader {
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    width: 100%;
+    display: grid;
+    gap: var(--primitives-spacing-4); /* pageHeader/padding/gap/container */
+}
+
+/* Standard header container */
+.pageheader__standard {
+    padding: var(--primitives-spacing-6) var(--primitives-spacing-36); /* vertical/horizontal standard/container */
+    background: var(--semantic-ph-bgA-fill); /* base fill for A */
+}
+
+/* A background — approximate a layered gradient using the A primitives */
+.pageheader__bgA {
+    /* You can tune composition here as needed by design */
+    background:
+            linear-gradient(
+                    180deg,
+                    var(--primitives-page-header-background-a-gradient-1-100, transparent) 0%,
+                    var(--primitives-page-header-background-a-gradient-1-200, transparent) 25%,
+                    var(--primitives-page-header-background-a-gradient-1-300, transparent) 50%,
+                    var(--primitives-page-header-background-a-gradient-2-100, transparent) 60%,
+                    var(--primitives-page-header-background-a-gradient-2-200, transparent) 75%
+            ),
+            linear-gradient(
+                    180deg,
+                    var(--primitives-page-header-background-a-gradient-3-100, transparent) 0%,
+                    var(--primitives-page-header-background-a-gradient-3-200, transparent) 50%,
+                    var(--primitives-page-header-background-a-gradient-3-300, transparent) 100%
+            ),
+            linear-gradient(
+                    180deg,
+                    var(--primitives-page-header-background-a-gradient-4-100, transparent) 0%,
+                    var(--primitives-page-header-background-a-gradient-4-200, transparent) 100%
+            ),
+            var(--semantic-ph-bgA-fill);
+}
+
+/* B background — brand-specific gradient primitives for each brand path */
+.pageheader__bgB {
+    background:
+            linear-gradient(
+                    180deg,
+                    var(--primitives-page-header-background-b-anthem-gradient-1-100, transparent) 0%,
+                    var(--primitives-page-header-background-b-anthem-gradient-1-200, transparent) 50%
+            ),
+            linear-gradient(
+                    180deg,
+                    var(--primitives-page-header-background-b-anthem-gradient-2-100, transparent) 0%,
+                    var(--primitives-page-header-background-b-anthem-gradient-2-200, transparent) 50%
+            ),
+            linear-gradient(
+                    180deg,
+                    var(--primitives-page-header-background-b-anthem-gradient-3-100, transparent) 0%,
+                    var(--primitives-page-header-background-b-anthem-gradient-3-200, transparent) 50%
+            ),
+            var(--semantic-ph-bgB-fill);
+}
+
+/* Welcome Dashboard area */
+.pageheader__welcome {
+    padding-top: var(--primitives-spacing-20);     /* padding/top/welcomeDashboard/header */
+    padding-left: var(--primitives-spacing-36);    /* padding/horizontal/welcomeDashboard/header */
+    padding-right: var(--primitives-spacing-36);
+    padding-bottom: var(--primitives-spacing-44);  /* padding/bottom/welcomeDashboard/header */
+    display: grid;
+    gap: var(--primitives-spacing-150);            /* padding/gap/welcomeDashboard/text */
+    color: var(--semantic-ph-text-welcomeDashboard);
+}
+
+.pageheader__memberName {
+    font-weight: var(--primitives-anthem-font-weight-semibold); /* font/weight/welcomeDashboard/memberName */
+    font-size: var(--primitives-font-size-6xl);
+    line-height: var(--primitives-line-height-6xl);
+}
+
+/* Standard member tabs (simple demo row) */
+.pageheader__tabs {
+    display: flex;
+    gap: var(--primitives-spacing-2);  /* padding/gap/memberSelection */
+    padding: var(--primitives-spacing-1) var(--primitives-spacing-250); /* vertical/horizontal memberTab */
+    background: var(--semantic-ph-fill-standard-memberTab);
+}
+
+.pageheader__tab {
+    color: var(--semantic-ph-text-standard-memberInactive);
+    border: var(--primitives-sizing-025) solid var(--semantic-ph-border-members-memberTab);
+    border-radius: var(--primitives-sizing-0); /* border/borderRadius/memberTab (Anthem 0) */
+    font-weight: var(--primitives-anthem-font-weight-semibold); /* font/weight/standard/memberTab */
+    font-size: var(--primitives-font-size-sm);
+    line-height: var(--primitives-line-height-sm);
+    padding: 2px 8px;
+}
+
+.pageheader__tab--active {
+    color: var(--semantic-ph-text-standard-memberActive);
+    background: var(--semantic-ph-fill-standard-linkWindow); /* same as white surface */
+}
+
+/* Search bars (outline demos) */
+.pageheader__searchBeta,
+.pageheader__standardSearch {
+    margin-top: var(--primitives-spacing-4);
+    margin-left: var(--primitives-spacing-36);  /* horizontal/searchBeta or /search */
+    margin-right: var(--primitives-spacing-36);
+    height: var(--primitives-spacing-4);
+    border: var(--primitives-sizing-025) solid var(--semantic-ph-border-standardSearch);
+    border-radius: var(--primitives-sizing-0); /* border/borderRadius/search (Anthem 0) */
+}
+.pageheader__searchBeta {
+    border-color: var(--semantic-ph-border-searchBeta);
+}

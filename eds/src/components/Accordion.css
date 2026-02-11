@@ -1,0 +1,72 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--primitives-sizing-6); /* accordion/padding/gap/title */
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+}
+
+/* One item */
+.accordion__item {
+    background: var(--semantic-accordion-bg-default);              /* accordion/background/default */
+    padding: var(--primitives-sizing-6) var(--primitives-sizing-6); /* vertical/horizontal container */
+    border: var(--primitives-sizing-025) solid transparent;         /* we don't have a border color token here */
+    border-radius: 0;
+    transition: background 120ms ease;
+}
+.accordion__item:hover {
+    background: var(--semantic-accordion-bg-hover);                 /* accordion/background/hover */
+}
+
+/* Header row */
+.accordion__header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: var(--primitives-sizing-6);
+    cursor: pointer;
+}
+
+/* Icon (chevron) */
+.accordion__icon {
+    width: var(--primitives-sizing-6);   /* accordion/icon/size */
+    height: var(--primitives-sizing-6);
+    color: var(--semantic-accordion-icon-default); /* accordion/icon/default */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 120ms ease, transform 120ms ease;
+}
+.accordion__item:hover .accordion__icon {
+    color: var(--semantic-accordion-icon-hover);    /* accordion/icon/hover */
+}
+
+/* Title */
+.accordion__title {
+    color: var(--semantic-accordion-text-title);       /* accordion/text/title */
+    font-weight: var(--primitives-anthem-font-weight-medium); /* accordion/font/weight/content */
+    font-size: var(--primitives-font-size-base);               /* accordion/font/size/content */
+    line-height: var(--primitives-line-height-base);           /* accordion/font/lineHeight/content */
+}
+
+/* Description line under title (optional) */
+.accordion__description {
+    color: var(--semantic-accordion-text-description); /* accordion/text/description */
+    font-weight: var(--primitives-anthem-font-weight-medium); /* accordion/font/weight/description */
+    font-size: var(--primitives-font-size-sm);                /* accordion/font/size/description */
+    line-height: var(--primitives-line-height-sm);            /* accordion/font/lineHeight/description */
+    margin-top: var(--primitives-sizing-6);
+}
+
+/* Content */
+.accordion__content {
+    color: var(--semantic-accordion-text-content);    /* accordion/text/content */
+    font-weight: var(--primitives-anthem-font-weight-medium); /* same as 'content' weight */
+    font-size: var(--primitives-font-size-base);
+    line-height: var(--primitives-line-height-base);
+    margin-top: var(--primitives-sizing-6);
+    display: none;
+}
+.accordion__content.open { display: block; }
+
+/* Rotate the chevron when open */
+.accordion__icon--open { transform: rotate(90deg); }

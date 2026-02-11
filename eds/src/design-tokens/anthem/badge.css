@@ -1,0 +1,22 @@
+@import './root.css';
+
+.badge--anthem {
+    /**
+    * @tokens-start
+    * @token Badge
+    */
+    
+    /* text */
+    --semantic-badge-text-white: var(--semantic-anthem-text-white);
+    --semantic-badge-text-gray:  var(--semantic-anthem-text-base);
+
+    /* backgrounds */
+    --semantic-badge-bg-success:       var(--semantic-anthem-surface-positive);
+    --semantic-badge-bg-info:          var(--semantic-anthem-surface-primary);
+    --semantic-badge-bg-warning:       var(--semantic-anthem-surface-urgent);
+    --semantic-badge-bg-optionalWhite: var(--semantic-anthem-surface-white);
+    --semantic-badge-bg-optionalGray:  var(--semantic-anthem-surface-container-gray);
+    --semantic-badge-bg-urgent:        var(--semantic-anthem-surface-critical);
+    --semantic-badge-bg-darkNeutral:   var(--semantic-anthem-surface-badge-dark-neutral);
+    --semantic-badge-bg-purple:        var(--semantic-anthem-surface-data-viz500);
+}

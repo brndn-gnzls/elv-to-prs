@@ -1,0 +1,72 @@
+/* src/components/SizeTable/SizeTable.module.css */
+
+.sizeWrapper {
+    margin-bottom: 62px; /* optional spacing after entire section */
+}
+
+.boldHeading {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.sizeImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.italicPara {
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.sizeTable {
+    width: 90%;
+    border-collapse: collapse;
+    border: 1px solid #eee; /* 1px #eee around entire table */
+}
+
+.sizeTable thead tr {
+    background-color: #eee; /* #EEE background for header */
+}
+
+/* Head cells => bold text, no vertical lines */
+.sizeTable th {
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Table body cells => horizontal row separators, no vertical lines */
+.sizeTable td {
+    padding: 8px;
+    vertical-align: top;
+    border-bottom: 1px solid #eee; /* row separator */
+}
+
+/* Remove last row's bottom border if desired */
+.sizeTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Extra classes to handle our hide/show logic */
+.sizeColumnMobileMetrics {
+    display: none; /* hidden on large screens by default */
+    margin-top: 8px; /* small spacing before metrics lines on mobile */
+    color: #555; /* optional styling for mobile metrics */
+}
+
+/* The entire 3rd column is shown on large, hidden on small. */
+.metricsColumn {}
+
+/* We want 3 columns on large, but 2 columns on small => hide .metricsColumn, show .sizeColumnMobileMetrics. */
+@media (max-width: 1024px) {
+    .metricsColumn {
+        display: none; /* hide entire 3rd column */
+    }
+
+    .sizeColumnMobileMetrics {
+        display: block; /* show metrics below the size label in column 1 */
+    }
+}

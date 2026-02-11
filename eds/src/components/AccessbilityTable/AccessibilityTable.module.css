@@ -1,0 +1,29 @@
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto; /* horizontal scroll on small screens */
+    margin: 16px 0;
+}
+
+.accessTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    color: #333;
+}
+
+.accessTable thead th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.accessTable tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.accessTable tbody tr:last-of-type td {
+    border-bottom: none; /* no border on final row */
+}

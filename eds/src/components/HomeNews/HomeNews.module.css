@@ -1,0 +1,84 @@
+.newsWrapper {
+    padding-top: 82px; /* push down 82px for the top lock-up */
+}
+
+/* -------- Top Lockup Styles -------- */
+.topLockup h2 {
+    font-size: 34px;
+    line-height: 36px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.topLockup p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 82px; /* space before articles */
+}
+
+/* -------- Articles Layout -------- */
+.newsStory {
+    display: flex;
+    margin-bottom: 100px; /* gap between multiple articles */
+}
+
+.newsImage {
+    width: 162px;
+    height: 162px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 24px;
+
+    /* Prevent the image from shrinking in a flex container */
+    flex-shrink: 0;
+}
+
+
+.newsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.newsText h2 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.newsText p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.bottomBorder {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px dotted #000;
+    margin-bottom: 16px;
+}
+
+.newsText p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* -------- Responsive (Small Screens < 768px) -------- */
+@media (max-width: 767px) {
+    .newsWrapper {
+        /* side padding for mobile */
+        padding: 82px 20px 0 20px;
+    }
+
+    .newsStory {
+        flex-direction: column; /* stack image above text */
+    }
+
+    .newsImage {
+        margin-right: 0;
+        margin-bottom: 16px;
+        align-self: center; /* center the image horizontally */
+    }
+}

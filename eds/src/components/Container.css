@@ -1,0 +1,11 @@
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: var(--primitives-container-min-width);
+    max-width: var(--primitives-container-max-width);
+    border: var(--primitives-sizing-025) solid var(--primitives-colors-grays-200);
+}
+
+/* Variants */
+.container--white { background: var(--semantic-container-bg-white); }
+.container--gray  { background: var(--semantic-container-bg-gray); }

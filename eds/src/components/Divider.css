@@ -1,0 +1,14 @@
+.divider {
+    width: 100%;
+    border-radius: 0; /* divider/borderRadius = none */
+    box-sizing: border-box;
+}
+
+/* Fill variants (color comes from brand alias) */
+.divider--light { background: var(--semantic-divider-fill-light); }
+.divider--dark  { background: var(--semantic-divider-fill-dark); }
+.divider--white { background: var(--semantic-divider-fill-white); }
+
+/* Weight variants (thickness from primitives) */
+.divider--thin  { height: var(--primitives-sizing-025); } /* divider/weight/thin */
+.divider--thick { height: var(--primitives-sizing-050); } /* divider/weight/thick */

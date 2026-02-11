@@ -1,0 +1,61 @@
+/* src/components/LargeAccordion/LargeAccordion.module.css */
+
+/* Wrapper for the entire accordion.
+   Keep it restricted to 650px max width, center or 100% on smaller screens.
+*/
+.accordionWrapper {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto; /* or remove if you want to handle alignment outside */
+}
+
+/* Each row has a label row + content area below,
+   with a 1px black border on bottom */
+.accordionRow {
+    border-bottom: 1px solid #000; /* black bottom border only */
+    padding: 0;
+    margin: 0;
+}
+
+/* The label row is clickable: 18px bold black, plus a +/– icon on the right. */
+.labelRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    /* no top border, only bottom from the container .accordionRow */
+    padding: 16px 0 0; /* spacing around the label row */
+}
+
+.labelText {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* plus or minus sign on the right */
+.icon {
+    font-size: 24px; /* slightly bigger if you want */
+    font-weight: normal;
+    color: #000;
+}
+
+/* The content area expands downward from the bottom,
+   initially zero height, transitions up to content size.
+*/
+.contentArea {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease; /* animate open/close */
+    margin-bottom: 16px; /* so the border is 16px below text when open */
+}
+
+/* When open, .open sets max-height large enough so content fits
+   We do this inline in the style, or can do it here if you want
+   .open { max-height: 1000px; }
+   but we used inline style in the JS for dynamic.
+*/
+.contentArea p {
+    margin: 0 0 16px 0; /* normal paragraph spacing */
+    line-height: 1.5;
+}

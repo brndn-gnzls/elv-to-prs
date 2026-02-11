@@ -1,0 +1,45 @@
+.tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-2); /* tooltip/padding/gap isn't specified; using 2 for icon+text spacing */
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+}
+
+/* Help icon (resting/hover) */
+.tooltip__help {
+    width: var(--primitives-sizing-5);   /* tooltip/icon/size/help */
+    height: var(--primitives-sizing-5);
+    color: var(--semantic-tt-icon-help-rest);
+    cursor: pointer;
+}
+.tooltip__help:hover { color: var(--semantic-tt-icon-help-hover); } /* tooltip/icon/help/hover */
+
+/* Bubble */
+.tooltip__bubble {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    margin-top: var(--primitives-spacing-6); /* vertical/content */
+    max-width: var(--brand-tooltip-max-width, none);
+    min-width: var(--brand-tooltip-min-width, auto);
+    background: var(--semantic-tt-bg);             /* tooltip/background */
+    color: var(--semantic-tt-text);                /* tooltip/text */
+    border: var(--primitives-sizing-025) solid transparent; /* tooltip/border/size (baseline) */
+    padding: var(--primitives-spacing-6) var(--primitives-spacing-6); /* h/v content */
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--primitives-spacing-2);
+}
+.tooltip__bubble:hover {
+    border-color: var(--semantic-tt-border-hover); /* tooltip/border/hover */
+}
+
+/* Close icon inside bubble */
+.tooltip__close {
+    width: var(--primitives-sizing-4);   /* tooltip/icon/size/close */
+    height: var(--primitives-sizing-4);
+    color: var(--semantic-tt-icon-close); /* tooltip/icon/close */
+    cursor: pointer;
+}

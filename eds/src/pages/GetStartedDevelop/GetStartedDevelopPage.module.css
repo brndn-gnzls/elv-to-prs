@@ -1,0 +1,83 @@
+.containerRow {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;   /* adjust as needed for your site */
+    margin: 0 auto;
+    min-height: 100vh;
+    background: #fafbfc;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.rightSide {
+    flex: 1 1 0;
+    min-width: 0;
+    background-color: #fff;
+    padding: 0 32px 24px 0px;
+    box-sizing: border-box;
+}
+
+/*
+   352px total => 300 for banner + 52 for tab bar,
+   pinned beneath nav at top: 78px,
+   you can adjust these values if your banner is a different height
+*/
+.bannerAndTabs {
+    position: sticky;
+    top: 78px;
+    z-index: 50; /* under nav if nav is z-index: 100 */
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    /* No overflow here,
+       because the actual scrolling happens inside DevTabs' content. */
+}
+
+.banner {
+    flex: 0 0 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #fff;
+    padding: 48px 158px 0 68px; /* example offsets matching your partial code */
+    margin-left: 300px; /* if you want the banner offset from left rail */
+    width: 827px;       /* total width if you want a fixed banner width */
+    box-sizing: border-box;
+}
+
+.banner h1 {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 16px;
+}
+
+.banner p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+}
+h1 {
+    font-size: 40px;
+    line-height: 44px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@media (max-width: 768px) {
+    .rightSide {
+        padding: 0 8px;
+    }
+}

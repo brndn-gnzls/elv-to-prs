@@ -1,0 +1,79 @@
+.slidein {
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+}
+
+/* Overlay (behind the card) */
+.slidein__overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--brand-slidein-bg-overlay);
+    opacity: 0.5;
+    display: none;
+}
+.slidein--open .slidein__overlay { display: block; }
+
+/* Card (the panel) */
+.slidein__card {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: var(--brand-slidein-width-card);
+    max-width: 100vw;
+    background: var(--semantic-slidein-bg-card);
+    border-left: var(--primitives-sizing-025) solid var(--brand-slidein-border-card);
+    transform: translateX(100%);
+    transition: transform 180ms ease-out;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.slidein--open .slidein__card { transform: translateX(0%); }
+
+/* Header */
+.slidein__header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--primitives-spacing-4);
+    padding: var(--primitives-spacing-6);
+    color: var(--semantic-slidein-text-header);
+    border-bottom: var(--primitives-sizing-025) solid transparent;
+}
+.slidein__back {
+    width: var(--primitives-sizing-5);
+    height: var(--primitives-sizing-5);
+    border-radius: var(--primitives-border-radius-rounded-full);
+    background: var(--semantic-slidein-bg-backArrow);
+    color: var(--semantic-slidein-icon-backArrow);
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+}
+.slidein__title {
+    font-weight: var(--primitives-anthem-font-weight-regular);
+    font-size: var(--primitives-font-size-base);
+    line-height: var(--primitives-line-height-base);
+}
+
+/* Content area */
+.slidein__content {
+    color: var(--semantic-slidein-text-content);
+    padding: var(--primitives-spacing-8);
+    display: grid;
+    gap: var(--primitives-spacing-8); /* slideIn/padding/gap/cardContent */
+    width: var(--brand-slidein-width-cardContent);
+    max-width: calc(100vw - var(--brand-slidein-width-overlay, 0px));
+    overflow: auto;
+}
+
+/* Footer with button group aligned to the right padding */
+.slidein__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--primitives-spacing-4);
+    padding: var(--primitives-spacing-6);
+    padding-right: var(--brand-slidein-padding-right-buttonGroup);
+}
+
+/* Utility */
+.slidein--visuallyHidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

@@ -1,0 +1,60 @@
+/* src/components/ComponentMetrics/ComponentMetrics.module.css */
+
+.metricsWrapper {
+    margin-bottom: 48px; /* optional spacing after entire section */
+}
+
+.metricsHeading {
+    font-size: 1.625rem; /* e.g. 26px for an h2? Adjust as needed */
+    line-height: 1.7;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* The outer grid => 2 rows, each row has 2 cells side-by-side.
+   We'll just stack rows vertically. */
+.metricsGrid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px; /* space between row 1 and row 2 */
+}
+
+/* Each row => horizontal. 2 cells => left, right => ~28px gap if you want. */
+.gridRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+}
+
+/* On small screens => 1 column per row, so each row basically 2 vertical cells?
+   Or do we want them to stack all 4? Typically 2 vertical cells.
+   We'll just do 1fr for each => 2 columns. If you want them to separate fully,
+   you can have each cell on its own row. Up to you.
+*/
+@media (max-width: 767px) {
+    .gridRow {
+        grid-template-columns: 1fr; /* stack left & right vertically */
+        row-gap: 28px; /* spacing between them in vertical layout */
+    }
+}
+
+/* Each cell => some styling */
+.metricsCell {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The image might be 312 wide x ??? high.
+   We'll let the brand assets define exact dimensions. */
+.metricsImage {
+    width: 312px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Stacks on small screens */
+@media (max-width: 766px) {
+    .metricsImage {
+        width: 100%;
+    }
+}

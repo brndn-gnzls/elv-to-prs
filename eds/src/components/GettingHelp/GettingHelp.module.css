@@ -1,0 +1,64 @@
+.gettingHelpWrapper {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000; /* normal text color */
+}
+
+.helpList {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 24px;
+}
+
+.helpList li {
+    padding-bottom: 14px;
+}
+
+.space24 {
+    height: 24px;
+}
+
+.helpLink {
+    color: #007032;
+    text-decoration: underline;
+}
+
+.gettingHelpWrapper p {
+    padding-bottom: 16px;
+    line-height: 24px;
+}
+
+.gettingHelpWrapper h2 {
+    font-size: 26px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.gettingHelpWrapper h4 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+.helpTopParagraph {
+    margin-bottom: 16px;
+}
+
+.bulletListWrapper {
+    padding-left: 16px;
+}
+
+.bulletListWrapper p {
+    padding-bottom: 14px;
+}
+
+.gettingHelpWrapper {
+    margin-bottom: 112px;
+    margin-left: 36px;
+}
+@media (max-width: 786px) {
+    .gettingHelpWrapper{
+        padding-left: 0!important;
+        margin-bottom: 112px;
+    }
+}

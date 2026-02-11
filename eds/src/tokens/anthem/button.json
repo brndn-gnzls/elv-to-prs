@@ -1,0 +1,20 @@
+{
+  "button": {
+    "primary": {
+      "backgroundColor": { "value": "#007BFF", "type": "color" },
+      "textColor":     { "value": "#FFFFFF", "type": "color" },
+      "borderRadius":  { "value": "4px",    "type": "borderRadius" },
+      "padding":       { "value": "8px 16px","type": "spacing" },
+      "fontSize":      { "value": "14px",   "type": "typography" },
+      "fontWeight":    { "value": "600",    "type": "typography" }
+    },
+    "secondary": {
+      "backgroundColor": { "value": "#6C757D", "type": "color" },
+      "textColor":       { "value": "#FFFFFF", "type": "color" },
+      "borderRadius":    { "value": "4px",    "type": "borderRadius" },
+      "padding":         { "value": "8px 16px","type": "spacing" },
+      "fontSize":        { "value": "14px",   "type": "typography" },
+      "fontWeight":      { "value": "600",    "type": "typography" }
+    }
+  }
+}

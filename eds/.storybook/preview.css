@@ -1,0 +1,4 @@
+#tabbutton-storybook-interactions-panel,
+#tabbutton-storybook-visual-testing-panel {
+    display: none !important;
+}

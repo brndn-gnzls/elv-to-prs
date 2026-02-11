@@ -1,0 +1,111 @@
+.radiogroup {
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    display: grid;
+    gap: var(--primitives-spacing-2); /* radio/padding/gap */
+}
+
+.radio {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: var(--primitives-spacing-1);       /* radio/padding/horizontal */
+    color: var(--semantic-radio-text-default);
+}
+
+/* Visually-hidden native input to drive states & a11y */
+.radio__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Circle (outer) */
+.radio__outer {
+    box-sizing: border-box;
+    width: var(--primitives-sizing-4);      /* radio/border/size & icon/size */
+    height: var(--primitives-sizing-4);
+    border-radius: 50%;
+    background: var(--semantic-radio-bg-input-default);
+    border: var(--primitives-sizing-025) solid var(--semantic-radio-border-input-default); /* weight */
+    display: grid;
+    place-items: center;
+    transition: background 120ms, border-color 120ms, box-shadow 120ms;
+}
+
+/* Inner (dot) */
+.radio__inner {
+    width: var(--primitives-sizing-2);      /* radio/fill/size */
+    height: var(--primitives-sizing-2);
+    border-radius: 50%;
+    background: transparent;
+    transition: background 120ms;
+}
+
+/* Hover */
+.radio:hover .radio__outer {
+    border-color: var(--semantic-radio-border-input-hover);
+    background: var(--semantic-radio-bg-input-hover);
+}
+
+/* Focus (inactive) */
+.radio__input:focus-visible + .radio__outer {
+    border-color: var(--semantic-radio-border-input-focus);
+    box-shadow: 0 0 0 var(--primitives-spacing-1) var(--semantic-radio-border-input-focusActive);
+}
+
+/* Checked / selected */
+.radio__input:checked + .radio__outer {
+    border-color: var(--semantic-radio-border-input-focusSelected);
+    background: var(--semantic-radio-bg-input-focus);
+}
+.radio__input:checked + .radio__outer .radio__inner {
+    background: var(--semantic-radio-fill-input-default);
+}
+
+/* Hover when selected */
+.radio:hover .radio__inner {
+    background: var(--semantic-radio-fill-input-hover);
+}
+.radio:hover .radio__outer {
+    border-color: var(--semantic-radio-border-input-hoverSelected);
+}
+
+/* Disabled */
+.radio--disabled {
+    opacity: var(--primitives-opacity-30);
+    pointer-events: none;
+}
+
+/* Error state */
+.radio--error .radio__outer {
+    border-color: var(--semantic-radio-border-input-error);
+    background: var(--semantic-radio-bg-input-error);
+}
+.radio__error {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-1);
+    color: var(--semantic-radio-text-errorMessage);
+    font-size: var(--primitives-font-size-sm);
+    line-height: var(--primitives-line-height-sm);
+    padding-top: var(--primitives-spacing-1); /* radio/padding/top/errorIcon (0 for Anthem, leave spacing as minimal) */
+}
+.radio__errorIcon {
+    width: var(--primitives-sizing-4); /* radio/icon/size */
+    height: var(--primitives-sizing-4);
+    color: var(--semantic-radio-icon-error);
+}
+
+/* Label text */
+.radio__label {
+    font-weight: var(--primitives-anthem-font-weight-medium); /* radio/font/weight */
+    font-size: var(--primitives-font-size-base);              /* radio/font/size/label */
+    line-height: var(--primitives-line-height-base);          /* radio/font/lineHeight/label */
+}
+
+/* Content (helper/description) */
+.radio__content {
+    margin-top: var(--primitives-spacing-1);                  /* radio/padding/top/input */
+    font-size: var(--primitives-font-size-base);              /* radio/font/size/content uses label size */
+    line-height: var(--primitives-line-height-base);          /* radio/font/lineHeight/content */
+}

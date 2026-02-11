@@ -1,0 +1,81 @@
+/* src/components/GettingStartedPath/GettingStartedPath.module.css */
+
+.pathWrapper {
+    display: flex;
+    align-items: center;
+    max-width: 605px;
+    height: 84px;
+    margin-bottom: 52px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 26px 0 74px 0;
+}
+
+.iconCol {
+    width: 44px;
+    height: 44px;
+    margin-right: 16px; /* space before text col */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconCol img {
+    width: 44px;
+    height: 44px;
+}
+
+/* Middle column: heading + body text */
+.textCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.heading {
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.bodyText {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* The caret column => right arrow */
+.caretCol {
+    margin-left: 34px;
+    display: flex;
+    align-items: center;
+}
+
+/* Replacing the "˃" char with a CSS arrow pointing right */
+.caret {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #5d5d5d;
+    border-bottom: 2px solid #5d5d5d;
+    transform: rotate(-45deg);
+    user-select: none;
+    /* optional: add a transition if you want a hover effect */
+}
+h1 {
+    font-size: 40px;
+    line-height: 44px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 28px;
+}

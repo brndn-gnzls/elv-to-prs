@@ -1,0 +1,105 @@
+.banner {
+    position: relative;
+    width: 100%;
+    padding-top: 32%;         
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* text at bottom of banner */
+    background: rgba(0,0,0,0.3);/* subtle dark overlay for readability */
+    padding: 1.5rem;
+}
+
+.title {
+    font-size: 42px;
+    margin: 0;
+    color: white;
+    line-height: 1.2;
+}
+
+.byline {
+    margin-top: 0.5rem;
+    color: #eee;
+    font-size: 1rem;
+}
+
+.articleContent p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 16px 0;
+}
+
+.articleContent h1 {
+    font-size: 42px;
+    line-height: 44px;
+    margin-bottom: 16px;
+}
+
+.articleContent h2 {
+    font-size: 32px;
+    line-height: 28px;
+    margin-bottom: 8px;
+}
+
+.articleContent h3 {
+    font-size: 24px;
+    line-height: 22px;
+    margin: 16px 0 8px;
+}
+
+.articleContent h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 16px 0 4px;
+}
+
+/* any other global resets you need, e.g. */
+.articleContent ul {
+    margin: 16px 0;
+    padding-left: 20px;
+}
+.articleContent li {
+    margin-bottom: 8px;
+}
+
+.articleContent a {
+    color: #007032;
+    text-decoration: underline;
+}
+
+.articleContent .getStartedBtn {
+    width: 174px;
+    height: 44px;
+    padding: 8px 16px;
+    background: #fff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 14px;
+    border: 1px solid black;
+    margin-bottom: 92px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    .banner {
+        padding-top: 35%;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .byline {
+        font-size: 0.875rem;
+    }
+}

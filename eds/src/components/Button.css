@@ -1,0 +1,149 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: ElevanceSans, sans-serif;
+    border-style: solid;
+    border-width: var(--primitives-sizing-025);
+    border-radius: 0; /* {Primitives/Value/borderRadius/none} */
+    cursor: pointer;
+}
+
+/* Sizes */
+.btn--large {
+    height: var(--primitives-sizing-11);                 /* button/height/large */
+    padding: var(--primitives-spacing-250) var(--primitives-spacing-12); /* vertical/horizontal large */
+    gap: var(--primitives-spacing-2);                    /* gap/large */
+}
+.btn--small {
+    /* Spreadsheet says height small = 0; keeping no fixed height is fine. */
+    padding: var(--primitives-spacing-2) var(--primitives-spacing-2);    /* padding/vertical/small + horizontal/small */
+    gap: var(--primitives-spacing-1);                                      /* gap/small */
+    min-width: var(--primitives-sizing-20);                                 /* minWidth/small */
+}
+
+/* ===== Primary ===== */
+.btn--primary {
+    background-color: var(--semantic-surface-primary);   /* default */
+    border-color: var(--semantic-border-primary);
+    color: var(--semantic-text-white);
+}
+.btn--primary:hover {
+    background-color: var(--semantic-surface-secondary); /* hover */
+}
+.btn--primary:active {
+    background-color: var(--semantic-surface-press);     /* press */
+}
+.btn--primary:focus-visible {
+    outline: none;
+    border-color: var(--semantic-border-primary);        /* focus */
+    /* background remains surface-primary per sheet */
+}
+.btn--primary:disabled {
+    background-color: var(--semantic-surface-primary);   /* disabled */
+    color: var(--semantic-text-white);
+    cursor: not-allowed;
+    opacity: var(--primitives-opacity-30);               /* button/disabled */
+}
+
+/* ===== Secondary ===== */
+.btn--secondary {
+    background-color: transparent;                       /* default (transparent) */
+    border-color: var(--semantic-border-primary);
+    color: var(--semantic-text-primary);
+}
+.btn--secondary:hover {
+    background-color: var(--semantic-surface-primary);   /* hover */
+    color: var(--semantic-text-white);
+}
+.btn--secondary:active {
+    background-color: var(--semantic-surface-press);     /* press */
+    color: var(--semantic-text-white);
+}
+.btn--secondary:focus-visible {
+    outline: none;
+    border-color: var(--semantic-border-primary);        /* focus */
+    /* background stays transparent */
+}
+.btn--secondary:disabled {
+    color: var(--semantic-text-primary);                 /* disabled */
+    border-color: var(--semantic-border-primary);
+    cursor: not-allowed;
+    opacity: var(--primitives-opacity-30);
+}
+
+/* ===== Secondary White ===== */
+.btn--secondary-white {
+    background-color: var(--semantic-surface-white);     /* default */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-primary);
+}
+.btn--secondary-white:hover {
+    background-color: var(--semantic-surface-secondary); /* hover */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-white);
+}
+.btn--secondary-white:active {
+    background-color: var(--semantic-surface-subdued);   /* press */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-white);
+}
+.btn--secondary-white:focus-visible {
+    outline: none;
+    background-color: var(--semantic-surface-white);     /* focus */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-primary);
+}
+.btn--secondary-white:disabled {
+    background-color: var(--semantic-surface-white);     /* disabled */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-primary);
+    cursor: not-allowed;
+    opacity: var(--primitives-opacity-30);
+}
+
+/* ===== Ghost ===== */
+.btn--ghost {
+    background-color: transparent;                       /* default */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-white);
+}
+.btn--ghost:hover {
+    background-color: var(--semantic-surface-secondary); /* hover */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-white);
+}
+.btn--ghost:active {
+    background-color: var(--semantic-surface-subdued);   /* press */
+    border-color: var(--semantic-border-white);
+    color: var(--semantic-text-white);
+}
+.btn--ghost:focus-visible {
+    outline: none;
+    border-color: var(--semantic-border-white);          /* focus */
+}
+.btn--ghost:disabled {
+    color: var(--semantic-text-white);                   /* disabled */
+    border-color: var(--semantic-border-white);
+    cursor: not-allowed;
+    opacity: var(--primitives-opacity-30);
+}
+
+/* Disabled utility (keeps parity with :disabled) */
+.btn--disabled { pointer-events: none; opacity: 0.6; }
+
+/* Icon sizes */
+.btn .icon-large { width: var(--primitives-sizing-5); height: var(--primitives-sizing-5); fill: currentColor; }
+.btn .icon-small { width: var(--primitives-sizing-4); height: var(--primitives-sizing-4); fill: currentColor; }
+
+/* Typography per spreadsheet (single-line cases) */
+.btn--large {
+    font-size: var(--primitives-font-size-base);
+    line-height: var(--primitives-line-height-base);
+    font-weight: 600; /* brand weight token exists per brand */
+}
+.btn--small {
+    font-size: var(--primitives-font-size-sm);
+    line-height: var(--primitives-line-height-sm);
+    font-weight: 600;
+}

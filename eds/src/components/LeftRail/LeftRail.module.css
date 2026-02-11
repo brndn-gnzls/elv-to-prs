@@ -1,0 +1,19 @@
+.leftRailWrapper {
+    width: 300px;
+    min-height: 100vh;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    padding: 8px 14px 0 14px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    z-index: 1;
+    flex-shrink: 0;
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .leftRailWrapper {
+        display: none;
+    }
+}

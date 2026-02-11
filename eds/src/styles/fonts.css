@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "ElevanceSans-Bold";
+    src: url("/fonts/ElevanceSans/ElevanceSans-Bold.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-BoldItalic";
+    src: url("/fonts/ElevanceSans/ElevanceSans-BoldItalic.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-Italic";
+    src: url("/fonts/ElevanceSans/ElevanceSans-Italic.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-Light";
+    src: url("/fonts/ElevanceSans/ElevanceSans-Light.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-LightItalic";
+    src: url("/fonts/ElevanceSans/ElevanceSans-LightItalic.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-Medium";
+    src: url("/fonts/ElevanceSans/ElevanceSans-Medium.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-MediumItalic";
+    src: url("/fonts/ElevanceSans/ElevanceSans-MediumItalic.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-Regular";
+    src: url("/fonts/ElevanceSans/ElevanceSans-Regular.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-Semibold";
+    src: url("/fonts/ElevanceSans/ElevanceSans-Semibold.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;  
+}
+
+@font-face {
+    font-family: "ElevanceSans-Variable";
+    src: url("/fonts/ElevanceSans/ElevanceSans-Variable.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-Variable.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ElevanceSans-VariableItalic";
+    src: url("/fonts/ElevanceSans/ElevanceSans-VariableItalic.woff2") format("woff2"),
+    url("/fonts/ElevanceSans/ElevanceSans-VariableItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;  
+}

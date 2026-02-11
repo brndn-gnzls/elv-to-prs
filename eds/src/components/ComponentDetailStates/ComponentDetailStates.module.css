@@ -1,0 +1,46 @@
+/* src/components/ComponentDetailStates/ComponentDetailStates.module.css */
+
+.statesWrapper {
+    /* optional overall wrapper styling */
+    margin-bottom: 48px;
+}
+
+.statesHeading {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 8px; /* optional spacing */
+}
+
+.statesIntro {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 0 0.5rem 0; /* optional */
+}
+
+
+/* Two-column grid => left images, right text. */
+.statesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* On small screens, stack them. */
+@media (max-width: 767px) {
+    .statesGrid {
+    }
+}
+
+.imagesColumn {
+    /* Each image is 312x96 with 28px below it, inline logic in JS. */
+}
+
+.stateImage {
+    width: 312px;
+    height: 96px;
+    object-fit: contain; /* or you'd rely on the exact dimension. */
+}
+
+.textColumn div{
+    margin-top: 3px;
+    padding-bottom: 24px;
+}

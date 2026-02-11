@@ -1,0 +1,15 @@
+/* src/components/ComponentDetailInteriorBulletList/ComponentDetailInteriorBulletList.module.css */
+
+.bulletList {
+    margin: 16px 0;
+    padding-left: 24px; /* indent so the default list bullets appear nicely */
+    list-style-type: disc; /* default discs */
+}
+
+.bulletItem {
+    margin-bottom: 8px; /* spacing between bullets */
+}
+
+.boldLead {
+    font-weight: bold;
+}

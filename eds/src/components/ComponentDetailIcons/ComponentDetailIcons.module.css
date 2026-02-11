@@ -1,0 +1,39 @@
+/* src/components/ComponentDetailIcons/ComponentDetailIcons.module.css */
+
+.iconsWrapper {
+    margin-bottom: 48px; /* optional spacing after entire section */
+}
+
+.iconsHeading {
+    font-size: 1.125rem; /* ~18px */
+    font-weight: bold;
+    margin-bottom: 8px; /* optional */
+}
+
+.iconsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px; /* 28px gap between columns */
+    row-gap: 0;       /* only 1 row */
+}
+
+/* On small screens, we can stack them. */
+@media (max-width: 767px) {
+    .iconsGrid {
+        grid-template-columns: 1fr; /* single column */
+        row-gap: 24px;             /* add some vertical spacing on mobile */
+    }
+}
+
+/* Common styling for each column's content */
+.iconColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.iconImage {
+    width: 312px;
+    height: 96px;
+    object-fit: contain;
+    /* or rely on exact dimension if you prefer */
+}

@@ -1,0 +1,105 @@
+.tabs {
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    width: 100%;
+}
+
+/* container paddings (minimal & pointer) */
+.tabs--minimal    { padding: var(--primitives-spacing-2) var(--primitives-spacing-6); }
+.tabs--pointer    { padding: var(--primitives-spacing-2) var(--primitives-spacing-6); }
+
+.tabs__list {
+    display: flex;
+    gap: var(--primitives-spacing-2);                     /* tab/padding/gap/minimal/container */
+    border-bottom: var(--primitives-sizing-050) solid var(--semantic-tab-border-minimal-inactive);
+}
+
+.tabs__tab {
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: var(--primitives-spacing-2) var(--primitives-spacing-6); /* min container paddings */
+    font-size: var(--primitives-font-size-base);                      /* minimal label */
+    line-height: var(--primitives-line-height-base);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-1);
+    cursor: pointer;
+    color: var(--semantic-tab-text-minimal-inactive);
+    border-bottom: var(--primitives-sizing-050) solid var(--semantic-tab-border-minimal-inactive);
+}
+
+.tabs__tab[aria-selected="true"] {
+    color: var(--semantic-tab-text-minimal-active);
+    border-bottom: var(--primitives-sizing-025) solid var(--semantic-tab-border-minimal-active);
+    font-weight: var(--primitives-anthem-font-weight-semibold); /* tab/font/weight/minimal/labelActive */
+}
+.tabs__tab:hover {
+    color: var(--semantic-tab-text-minimal-hover);
+    border-bottom-color: var(--semantic-tab-border-minimal-hover);
+}
+.tabs__tab:active {
+    color: var(--semantic-tab-text-minimal-press);
+    border-bottom-color: var(--semantic-tab-border-minimal-press);
+}
+.tabs__tab:focus-visible {
+    outline: var(--primitives-sizing-050) solid var(--semantic-tab-border-minimal-focus);
+}
+
+/* icon in minimal tab */
+.tabs__icon {
+    width: var(--primitives-sizing-4); /* default; overridden if you want icon-only */
+    height: var(--primitives-sizing-4);
+    color: var(--semantic-tab-icon-minimal-inactive);
+}
+.tabs__tab[aria-selected="true"] .tabs__icon { color: var(--semantic-tab-icon-minimal-active); }
+.tabs__tab:hover .tabs__icon { color: var(--semantic-tab-icon-minimal-hover); }
+.tabs__tab:active .tabs__icon { color: var(--semantic-tab-icon-minimal-press); }
+.tabs__tab:focus-visible .tabs__icon {
+    color: var(--semantic-tab-icon-minimal-activeFocus);
+}
+
+/* pointer variant (filled pill with arrow) */
+.tabs--pointer .tabs__list {
+    border-bottom: none;
+    gap: var(--primitives-spacing-1);
+}
+.tabs--pointer .tabs__tab {
+    background: var(--semantic-tab-bg-pointer-inactive);
+    color: var(--semantic-tab-text-text-inactive);
+    border-radius: var(--primitives-border-radius-rounded-full);
+    padding: var(--primitives-spacing-3) var(--primitives-spacing-6); /* pointer container thick default */
+    position: relative;
+    border: var(--primitives-sizing-025) solid var(--semantic-tab-border-pointer-inactive);
+}
+.tabs--pointer .tabs__tab:hover {
+    background: var(--semantic-tab-bg-pointer-hover);
+}
+.tabs--pointer .tabs__tab[aria-selected="true"] {
+    background: var(--semantic-tab-bg-pointer-active);
+    color: var(--semantic-tab-text-text-active);
+    border-color: var(--semantic-tab-border-pointer-focus);
+}
+.tabs--pointer .tabs__tab:focus-visible {
+    box-shadow:
+            0 0 0 var(--primitives-sizing-050) var(--semantic-tab-border-pointer-focus),
+            0 0 0 calc(var(--primitives-sizing-050) + var(--primitives-sizing-025)) var(--semantic-tab-border-pointer-gap-focus);
+}
+
+/* little arrow for active tab */
+.tabs--pointer .tabs__tab[aria-selected="true"]::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * var(--primitives-sizing-4));
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--primitives-sizing-8);  /* tab/width/pointer/arrow */
+    height: var(--primitives-sizing-4); /* tab/height/pointer/arrow */
+    background: var(--semantic-tab-bg-pointer-arrow-active);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+/* disabled & opacity */
+.tabs--disabled { opacity: var(--primitives-opacity-30); pointer-events: none; }
+
+/* panels */
+.tabs__panel { padding: var(--primitives-spacing-6) 0; }

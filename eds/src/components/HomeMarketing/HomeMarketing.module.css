@@ -1,0 +1,93 @@
+.marketingWrapper {
+    width: 100%;                   /* full-bleed background */
+    background-color: #1255e8;
+    overflow: hidden;
+    margin-top: 14px;
+    display: flex;                 /* center the inner container */
+    justify-content: center;
+}
+
+/* inner flex container that is centered & capped */
+.marketingInner {
+    display: flex;
+    gap: 32px;
+    max-width: 1280px;             /* adjust to your design system */
+    width: 100%;
+    height: 892px;
+    box-sizing: border-box;
+    padding: 0 16px;               /* optional side padding */
+}
+
+.leftColumn {
+    flex: 1;
+    color: #fff;
+    padding-left: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.leftColumn h2 {
+    font-size: 34px;
+    line-height: 36px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.leftColumn h3 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.leftColumn p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.tryItBtn {
+    width: 174px;
+    height: 44px;
+    padding: 8px 16px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightColumn {
+    flex: 0 0 650px;               /* fixed width = your image width */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 650px 600px;
+    box-sizing: border-box;
+}
+
+/* -------------- SMALL SCREENS (<768px) -------------- */
+@media (max-width: 767px) {
+    .marketingInner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .leftColumn {
+        padding-left: 0;
+        text-align: center;
+        padding: 32px;
+    }
+
+    .tryItBtn {
+        margin: 0 auto;
+    }
+
+    .rightColumn {
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+.alert {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    column-gap: var(--primitives-spacing-3);               /* alert/padding/gap */
+    row-gap: var(--primitives-spacing-2);
+    padding: var(--primitives-spacing-2) var(--primitives-spacing-2); /* vertical default; right default */
+    padding-left: var(--primitives-spacing-4);             /* alert/padding/left */
+    background: var(--semantic-alert-surface-background);  /* background/default */
+    color: var(--semantic-alert-text-default);             /* text/default */
+    border: var(--primitives-sizing-025) solid var(--semantic-alert-border-default); /* border/size + border/default */
+    font-size: var(--primitives-font-size-base);           /* font/size */
+    line-height: var(--primitives-line-height-base);       /* font/lineHeight */
+}
+
+/* left icon */
+.alert__icon {
+    width: var(--primitives-sizing-5);                     /* icon/size */
+    height: var(--primitives-sizing-5);
+    margin-top: var(--primitives-spacing-050);             /* padding/top/icon */
+    color: currentColor; /* overridden by variants below */
+}
+
+/* content (title/description/inline link) */
+.alert__content {
+    display: grid;
+    gap: var(--primitives-spacing-2);
+}
+
+/* inline link inside alert */
+.alert__link {
+    color: var(--semantic-alert-text-link);                /* text/link */
+    font-weight: var(--primitives-anthem-font-weight-semibold); /* font/weight/link */
+    text-decoration: none;
+}
+.alert__link:hover { text-decoration: underline; }
+
+/* dismiss button on the right */
+.alert__dismiss {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--primitives-spacing-050);              /* padding/horizontal/dismissIcon */
+    color: var(--semantic-alert-icon-dismiss);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+/* --------- VARIANTS (innerShadow + icon color) ---------- */
+/* We apply an inset ring using size from primitives and color per status. */
+.alert--error  { box-shadow: inset 0 0 0 var(--primitives-sizing-1) var(--semantic-alert-shadow-error); }
+.alert--info   { box-shadow: inset 0 0 0 var(--primitives-sizing-1) var(--semantic-alert-shadow-info); }
+.alert--success{ box-shadow: inset 0 0 0 var(--primitives-sizing-1) var(--semantic-alert-shadow-success); }
+.alert--urgent { box-shadow: inset 0 0 0 var(--primitives-sizing-1) var(--semantic-alert-shadow-urgent); }
+
+.alert--error   .alert__icon { color: var(--semantic-alert-icon-error); }
+.alert--info    .alert__icon { color: var(--semantic-alert-icon-info); }
+.alert--success .alert__icon { color: var(--semantic-alert-icon-success); }
+.alert--urgent  .alert__icon { color: var(--semantic-alert-icon-urgent); }
+
+/* Typography weights */
+.alert { font-weight: 600!important; font-family: 'ElevanceSans', sans-serif!important} /* font/weight/default */
+
+/* Right padding already handled by default; vertical handled above */

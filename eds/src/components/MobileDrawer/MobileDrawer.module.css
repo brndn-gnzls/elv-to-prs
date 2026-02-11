@@ -1,0 +1,109 @@
+/* Drawer container */
+.drawer {
+    position: fixed;
+    top: 78px;
+    right: -255px;
+    width: 255px;
+    height: calc(100vh - 78px);
+    background-color: #fff;
+    transition: right 0.3s ease;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.openDrawer {
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 9997;
+    pointer-events: none;
+}
+
+.showOverlay {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.accordionWrapper {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.mobileAccordionWrapper {
+    margin-bottom: 16px;
+}
+
+.accordionLabel {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.mobileLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileLink {
+    text-decoration: none;
+    color: #000;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+.mobileLink:hover {
+    background-color: #eeeeee;
+}
+
+.activeLink {
+    background-color: #eeeeee;
+}
+
+.bottomRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+}
+
+.bottomLeft {
+    display: flex;
+    align-items: center;
+}
+
+.iconLink {
+    margin-right: 16px;
+}
+
+.iconLink img {
+    width: 24px;
+    height: 24px;
+}
+
+.toggleBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.toggleBtn img {
+    width: 24px;
+    height: 24px;
+}

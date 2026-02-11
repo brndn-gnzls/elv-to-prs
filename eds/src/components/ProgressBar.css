@@ -1,0 +1,77 @@
+.progressbar {
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    display: grid;
+    gap: var(--primitives-spacing-2);             /* progressBar/padding/gap */
+    width: 100%;
+    max-width: 720px; /* sensible demo cap; table stays full width in story */
+}
+
+/* -------- Line style (thin bar with current/inactive/success) -------- */
+.progressbar__line {
+    position: relative;
+    width: var(--primitives-progress-bar-line-width-horizontal);  /* width/horizontal/line */
+    min-width: var(--primitives-progress-bar-line-min-width-horizontal); /* minWidth/horizontal/line */
+    height: var(--primitives-sizing-050);       /* height/horizontal/line */
+    background: var(--semantic-pb-fill-line-inactive);
+    border-radius: var(--primitives-border-radius-rounded-full);
+    border: var(--primitives-sizing-050) solid var(--semantic-pb-border-inactive); /* border/weight + inactive */
+    overflow: hidden;
+}
+.progressbar__lineFill {
+    height: 100%;
+    background: var(--semantic-pb-fill-line-primary);
+    border-right: var(--primitives-sizing-050) solid var(--semantic-pb-border-current-primary);
+    border-radius: var(--primitives-border-radius-rounded-full);
+}
+
+/* success line variant */
+.progressbar--success .progressbar__lineFill {
+    background: var(--semantic-pb-fill-line-success);
+    border-right-color: var(--semantic-pb-border-current-success);
+}
+
+/* labels below/above line */
+.progressbar__labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--primitives-font-size-sm);
+    line-height: var(--primitives-line-height-2xs);
+}
+.progressbar__label--inactive { color: var(--semantic-pb-text-inactive); font-weight: var(--primitives-anthem-font-weight-medium); }
+.progressbar__label--current  { color: var(--semantic-pb-text-active-primary); font-weight: var(--primitives-anthem-font-weight-semibold); }
+.progressbar--success .progressbar__label--current { color: var(--semantic-pb-text-active-success); }
+
+/* -------- Complete style (pill/step) -------- */
+.progressbar__complete {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-2);
+    height: var(--primitives-sizing-5);                 /* height/step/complete */
+    width: var(--primitives-sizing-5);                  /* width/step/complete (demo pill uses square + radius) */
+    border-radius: var(--primitives-sizing-6);          /* border/borderRadius/complete */
+    background: var(--semantic-pb-fill-complete-primary);
+    border: var(--primitives-sizing-050) solid var(--semantic-pb-border-current-primary); /* border/weight */
+    color: var(--semantic-pb-icon-complete);
+    justify-content: center;
+}
+.progressbar--success .progressbar__complete {
+    background: var(--semantic-pb-fill-complete-success);
+    border-color: var(--semantic-pb-border-current-success);
+}
+
+/* Outline (height/outline & width/outline primarily for demo container) */
+.progressbar__outline {
+    height: var(--primitives-sizing-5);                 /* border/height/outline */
+    width: var(--primitives-progress-bar-line-width-horizontal); /* width/horizontal/line */
+    border: var(--primitives-sizing-050) solid var(--semantic-pb-border-inactive); /* border/weight + inactive */
+    border-radius: var(--primitives-border-radius-rounded-full);
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* typography used across */
+.progressbar__value, .progressbar__total {
+    font-size: var(--primitives-font-size-sm);            /* font/size */
+    line-height: var(--primitives-line-height-2xs);       /* font/lineHeight */
+}
+.progressbar__value { font-weight: var(--primitives-anthem-font-weight-semibold); } /* fontWeight/current */
+.progressbar__total { font-weight: var(--primitives-anthem-font-weight-medium); }   /* fontWeight/inactive */

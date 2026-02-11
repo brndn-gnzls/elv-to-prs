@@ -1,0 +1,82 @@
+.toggle {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: var(--primitives-spacing-2);           /* toggle/padding/gap */
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    color: var(--semantic-toggle-text-label);
+}
+
+/* left label */
+.toggle__label {
+    font-weight: var(--primitives-anthem-font-weight-medium);  /* toggle/font/weight/label */
+    font-size: var(--primitives-font-size-base);               /* toggle/font/size/label */
+    line-height: var(--primitives-line-height-base);           /* toggle/font/lineHeight/label */
+}
+
+/* switch track */
+.toggle__switch {
+    position: relative;
+    display: inline-grid;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: var(--primitives-border-radius-rounded-full); /* toggle/border/borderRadius */
+    border: var(--primitives-sizing-050) solid transparent;      /* toggle/border/size */
+    padding: var(--primitives-spacing-050) var(--primitives-spacing-150); /* vertical/horizontal from spec */
+    cursor: pointer;
+    user-select: none;
+    width: 47px;
+}
+
+/* background (track) by state */
+.toggle--on  .toggle__switch { background: var(--semantic-toggle-fill-on-default); }
+.toggle--off .toggle__switch { background: var(--semantic-toggle-fill-off-default); }
+
+.toggle--on  .toggle__switch:hover { background: var(--semantic-toggle-fill-on-hover); }
+.toggle--off .toggle__switch:hover { background: var(--semantic-toggle-fill-off-hover); }
+
+/* focus ring on the track using :focus-visible on the internal button */
+.toggle__button:focus-visible + .toggle__switch {
+    box-shadow: 0 0 0 var(--primitives-spacing-050) var(--semantic-toggle-border-focus); /* spacing/focusActive + border/focus color */
+}
+
+/* disabled */
+.toggle--disabled { opacity: var(--primitives-opacity-30); pointer-events: none; } /* toggle/disabled */
+
+/* handle */
+.toggle__handle {
+    width: var(--primitives-sizing-4);   /* toggle/width/handle */
+    height: var(--primitives-sizing-4);  /* toggle/height/handle */
+    border-radius: var(--primitives-border-radius-rounded-full);
+    background: var(--semantic-toggle-fill-handle);
+    transform: translateX(0);
+    transition: transform 120ms ease;
+}
+.toggle--on  .toggle__handle { transform: translateX(16px); } /* basic 32px track interior space assumption */
+
+/* state text to the right of switch */
+.toggle__state {
+    font-weight: var(--primitives-anthem-font-weight-semibold); /* toggle/font/weight/toggle */
+    font-size: var(--primitives-font-size-xs);                  /* toggle/font/size/toggle */
+    line-height: var(--primitives-line-height-xs);              /* toggle/font/lineHeight/toggle */
+    margin-left: var(--primitives-spacing-2);
+    color: var(--semantic-toggle-text-state-off);
+}
+.toggle--on .toggle__state { color: var(--semantic-toggle-text-state-on); }
+
+/* error row (icon + text) */
+.toggle__error {
+    grid-column: 1 / -1;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-2);
+    font-weight: var(--primitives-anthem-font-weight-medium);   /* toggle/font/weight/error */
+    font-size: var(--primitives-font-size-sm);                  /* toggle/font/size/error */
+    line-height: var(--primitives-line-height-sm);              /* toggle/font/lineHeight/error */
+    color: var(--semantic-toggle-text-error);
+}
+.toggle__errorIcon {
+    width: var(--primitives-sizing-5);  /* toggle/icon/size/error */
+    height: var(--primitives-sizing-5);
+    color: var(--semantic-toggle-icon-error);
+}

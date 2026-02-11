@@ -1,0 +1,65 @@
+.sectionheader {
+    width: 100%;
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    display: grid;
+    gap: var(--primitives-spacing-2); /* sectionHeader/padding/gap/header/default */
+}
+
+/* Header row */
+.sectionheader__header {
+    display: grid;
+    gap: var(--primitives-spacing-2); /* default & compounded */
+}
+
+.sectionheader--compounded .sectionheader__header {
+    gap: var(--primitives-spacing-2); /* sectionHeader/padding/gap/header/compounded */
+}
+
+.sectionheader--subheaderLarge .sectionheader__header {
+    gap: var(--primitives-spacing-250); /* sectionHeader/padding/gap/header/subheaderLarge */
+    padding-top: var(--brand-sectionheader-padding-top-subheaderLarge, 0); /* spreadsheet shows 0 for Anthem; brand slot if needed */
+}
+
+.sectionheader--subheaderSmall .sectionheader__header {
+    gap: var(--primitives-spacing-250); /* sectionHeader/padding/gap/header/subheaderSmall */
+    padding-top: var(--brand-sectionheader-padding-top-subheaderSmall, 0);
+}
+
+/* Title + Description colors (from brand aliases) */
+.sectionheader__title {
+    color: var(--semantic-sh-text-header-default);
+}
+.sectionheader--compounded    .sectionheader__title { color: var(--semantic-sh-text-header-compounded); }
+.sectionheader--subheaderLarge .sectionheader__title { color: var(--semantic-sh-text-header-subheaderLg); }
+.sectionheader--subheaderSmall .sectionheader__title { color: var(--semantic-sh-text-header-subheaderSm); }
+
+.sectionheader__desc {
+    color: var(--semantic-sh-text-desc-default);
+}
+.sectionheader--compounded .sectionheader__desc { color: var(--semantic-sh-text-desc-compounded); }
+
+/* Divider variants */
+.sectionheader__divider {
+    height: var(--primitives-sizing-1); /* sectionHeader/height/divider/default */
+    border-radius: 0; /* sectionHeader/borderRadius = none (no explicit row, keep none) */
+    width: var(--primitives-section-header-divider-width-default);
+    background: var(--semantic-sh-divider-default);
+}
+
+.sectionheader--compounded .sectionheader__divider {
+    width: var(--primitives-section-header-divider-width-compounded);
+    height: var(--primitives-sizing-025); /* sectionHeader/height/compounded */
+    background: var(--semantic-sh-divider-compounded);
+}
+
+.sectionheader--subheaderLarge .sectionheader__divider {
+    width: var(--primitives-section-header-divider-width-subheaderLarge);
+    height: var(--primitives-section-header-divider-height-subheaderLarge);
+    background: var(--semantic-sh-divider-subheaderLg);
+}
+
+.sectionheader--subheaderSmall .sectionheader__divider {
+    width: var(--primitives-section-header-divider-width-subheaderSmall);
+    height: var(--primitives-section-header-divider-height-subheaderSmall);
+    background: var(--semantic-sh-divider-subheaderSm);
+}

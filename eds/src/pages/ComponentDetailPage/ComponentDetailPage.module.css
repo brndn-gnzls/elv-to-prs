@@ -1,0 +1,18 @@
+.containerRow {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;   /* adjust for your design */
+    margin: 0 auto;
+    min-height: 100vh;
+    background: #fafbfc;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.rightSide {
+    flex: 1 1 0;
+    min-width: 0;
+    background-color: #fff;
+    padding: 0 32px 24px 32px;  /* adjust for spacing */
+    box-sizing: border-box;
+}

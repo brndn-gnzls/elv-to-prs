@@ -1,0 +1,73 @@
+/* src/pages/GetStartedDesignPage.module.css */
+
+.containerRow {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;   /* adjust as needed */
+    margin: 0 auto;
+    min-height: 100vh;
+    background: #fafbfc;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.rightSide {
+    flex: 1 1 0;
+    min-width: 0;
+    background-color: #fff;
+    padding: 0 32px 24px 32px;
+    box-sizing: border-box;
+}
+
+/* No sticky or offset needed! */
+.banner {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 48px 68px 0 68px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+p a {
+    color: #007032 !important;
+    text-decoration: underline !important;
+}
+
+.banner h1 {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 16px;
+}
+
+.banner p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+h1 {
+    font-size: 40px;
+    line-height: 44px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* Responsive: stack content */
+@media (max-width: 786px) {
+    .banner {
+        padding: 14px 0px 0px 14px;
+        width: 100%;
+    }
+}

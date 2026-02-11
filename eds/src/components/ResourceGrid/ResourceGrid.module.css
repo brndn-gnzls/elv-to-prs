@@ -1,0 +1,50 @@
+/* src/components/ResourceGrid/ResourceGrid.module.css */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
+}
+
+.card {
+    position: relative;
+    padding: 24px 16px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 74px;
+    height: 74px;
+    padding: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.body {
+    margin-left: 16px;
+}
+
+.link {
+    display: inline-block;
+    font-size: 18px;
+    color: #007032;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 12px;
+    margin: 0;
+}
+
+.icon {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+}

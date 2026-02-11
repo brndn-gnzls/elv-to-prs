@@ -1,0 +1,8 @@
+.notificationBox {
+    width: 100%;
+    padding: 24px;
+    margin-bottom: 75px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px 2px 2px 6px;
+}

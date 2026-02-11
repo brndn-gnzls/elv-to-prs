@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer Base {
+    body {
+        font-size: 16px;
+        line-height: 20px;
+        color: #3d3d3d;
+        margin:0;
+        padding:0;
+        font-family: Inter;
+        margin-bottom: 8px!important;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    h1 {
+        font-size: 40px; /* 40px */
+        line-height: 44px;
+        font-family: ElevanceSans-Semibold;
+        user-select: none;
+    }
+
+    h2 {
+        font-size: 24px; /* 34px */
+        line-height: 28px;
+        font-family: ElevanceSans-Semibold;
+    }
+
+    h3 {
+        font-size: 16px; /* 26px */
+        line-height: 24px;
+        font-family: ElevanceSans-Semibold;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+        font-family: ElevanceSans-Semibold;
+    }
+
+    .button-copy {
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .util-bg-footer {
+        background-color: #FAFAFA;
+    }
+}

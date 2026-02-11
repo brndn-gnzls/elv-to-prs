@@ -1,0 +1,133 @@
+.textfield {
+    display: flex;
+    flex-direction: column;
+    gap: var(--primitives-spacing-2); /* labelOptional gap */
+    font-family: ElevanceSans, sans-serif;
+    width: 100%;
+    min-width: var(--primitives-text-field-width-min);
+    max-width: var(--primitives-text-field-width-max);
+    color: var(--semantic-text-input);
+}
+
+/* Background */
+.textfield {
+    background: var(--semantic-surface-background);
+    border-style: solid;
+    border-color: var(--semantic-border-base);
+    border-width: var(--primitives-sizing-025); /* border/size */
+    border-radius: 0; /* textField/borderRadius = none */
+}
+
+/* Label */
+.textfield__label {
+    color: var(--semantic-text-label);
+    font-weight: 600;
+    font-size: var(--primitives-font-size-base);
+    line-height: var(--primitives-line-height-base);
+    font-family: ElevanceSans, sans-serif;
+}
+
+/* Optional text */
+.textfield__optional {
+    margin-left: var(--primitives-spacing-2);
+    font-size: var(--primitives-font-size-sm);
+    line-height: var(--primitives-line-height-sm);
+    color: var(--semantic-text-guidance);
+    display: none;
+}
+
+/* Input row (icon + input) */
+.textfield__row {
+    display: flex;
+    align-items: center;
+    gap: var(--primitives-spacing-1); /* gap/iconText, gap/textIcon */
+    padding: var(--primitives-spacing-250) var(--primitives-spacing-3); /* padding/vertical/input, padding/horizontal/input */
+    height: var(--primitives-sizing-11); /* height/input/singleLine */
+}
+
+/* Icon */
+.textfield__icon {
+    display: inline-flex;
+    width: var(--primitives-sizing-5);  /* icon/size/default */
+    height: var(--primitives-sizing-5);
+    color: var(--semantic-icon-base);
+}
+
+/* Input element */
+.textfield__input {
+    flex: 1 1 auto;
+    background: transparent;
+    border: 0;
+    color: var(--semantic-text-input);
+    font-weight: var(--primitives-anthem-font-weight-medium); /* font/weight/input */
+    font-size: var(--primitives-font-size-sm);                /* font/size/input */
+    line-height: var(--primitives-line-height-sm);            /* font/lineHeight/input */
+    outline: none;
+    font-family: ElevanceSans, sans-serif;
+}
+
+/* Placeholder */
+.textfield__input::placeholder {
+    color: var(--semantic-text-placeholder);
+    opacity: 1;
+}
+
+/* Character count / validations / help */
+.textfield__meta,
+.textfield__help,
+.textfield__help2 {
+    font-size: var(--primitives-font-size-sm); /* font sizes for optional/characterCount/validations/help */
+    line-height: var(--primitives-line-height-sm);
+    color: var(--semantic-text-help); /* base */
+    margin-top: var(--primitives-spacing-050); /* padding/top/characterCount, multilineIcon, etc. */
+}
+.textfield__guidance {
+    color: var(--semantic-text-guidance);
+}
+
+/* ----- Status variants (border + icon + text overrides) ----- */
+/* active (focus/active) */
+.textfield--status-active {
+    border-color: var(--semantic-border-active);  /* border/active -> primary */
+    border-width: var(--primitives-sizing-050);   /* border/weight */
+}
+.textfield--status-active .textfield__icon {
+    color: var(--semantic-icon-active);
+}
+
+/* critical */
+.textfield--status-critical { border-color: var(--semantic-border-critical); }
+.textfield--status-critical .textfield__icon { color: var(--semantic-icon-critical); }
+.textfield--status-critical .textfield__help,
+.textfield--status-critical .textfield__help2 { color: var(--semantic-text-critical); }
+
+/* urgent */
+.textfield--status-urgent { border-color: var(--semantic-border-urgent); }
+.textfield--status-urgent .textfield__icon { color: var(--semantic-icon-urgent); }
+.textfield--status-urgent .textfield__help { color: var(--semantic-text-urgent); }
+
+/* positive */
+.textfield--status-positive { border-color: var(--semantic-border-positive); }
+.textfield--status-positive .textfield__icon { color: var(--semantic-icon-positive); }
+.textfield--status-positive .textfield__help { color: var(--semantic-text-positive); }
+
+/* info */
+.textfield--status-info .textfield__icon { color: var(--semantic-icon-info); }
+.textfield--status-info .textfield__help { color: var(--semantic-text-info); }
+
+/* Disabled */
+.textfield--disabled {
+    opacity: var(--primitives-opacity-30);
+    pointer-events: none;
+}
+
+/* Guidance icon size (if used) */
+.textfield__icon--guidance {
+    width: var(--primitives-sizing-2); /* icon/size/guidance */
+    height: var(--primitives-sizing-2);
+}
+
+/* Extra gaps that your sheet calls out */
+.textfield--has-password-toggle .textfield__row { gap: var(--primitives-spacing-6); } /* gap/inputPassword */
+.textfield--has-leading-icon .textfield__row { gap: var(--primitives-spacing-1); }   /* gap/iconText */
+.textfield--has-trailing-icon .textfield__row { gap: var(--primitives-spacing-1); }  /* gap/textIcon */

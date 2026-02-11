@@ -1,0 +1,82 @@
+/* src/components/ComponentDetailBestPractices/ComponentDetailBestPractices.module.css */
+
+.bestWrapper {
+    margin-bottom: 48px; /* optional spacing after entire section */
+}
+
+.bestHeading {
+    font-size: 1.625rem; /* e.g. 26px for an h2 */
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* The outer grid => each row has 2 columns (left = do, right = don't) */
+.bpGrid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px; /* vertical space between each row */
+}
+
+/* A single row => 2 columns => left do item, right dont item */
+.bpRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 42px;
+}
+
+/* On mobile => stack them vertically => do above dont */
+@media (max-width: 767px) {
+    .bpRow {
+        grid-template-columns: 1fr;
+        row-gap: 28px; /* space between do/don't on small screens */
+    }
+}
+
+/* Each practice cell => do or don’t item */
+.practiceCell {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The row containing icon + heading => side by side inline */
+.headingRow {
+    display: flex;
+    align-items: center; /* center vertically */
+    margin-bottom: 8px;
+}
+
+/* Circle => 22x22, color from inline style, white text */
+.iconCircle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 1rem; /* adjust if needed */
+    font-family: Arial, sans-serif !important;
+    -webkit-text-fill-color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px; /* space between circle + heading */
+}
+
+.cellTitle {
+    font-weight: bold;
+    margin: 0;
+    font-size: 16px;
+}
+
+.cellParagraph {
+    margin-bottom: 16px; /* space after paragraph before the image */
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* The brand image */
+.practiceImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}

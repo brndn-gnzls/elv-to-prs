@@ -1,0 +1,22 @@
+/* src/components/BulletList/BulletList.module.css */
+
+/* The <ul> itself */
+.bulletList {
+    margin: 16px 0;
+    padding-left: 24px; /* indent to show default bullet nicely */
+    list-style-type: disc; /* default disc bullets */
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Each <li> in the list */
+.bulletItem {
+    margin-bottom: 8px; /* vertical spacing between bullets */
+}
+
+/* The bold portion of each bullet’s lead text */
+.boldLead {
+    font-weight: bold;
+    font-size: 16px!important;
+    line-height: 20px;
+}

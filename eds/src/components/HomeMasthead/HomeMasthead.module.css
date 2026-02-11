@@ -1,0 +1,159 @@
+.mastheadWrapper {
+    display: grid;
+    place-items: center;
+    height: 760px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;   /* prevents blob overflow scrollbars if large on small screens */
+}
+
+.gradientContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #794cfe;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    user-select: none;
+}
+
+.gradientColor {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    border-radius: 30% 80% 75% 40% / 40% 40% 70% 50%;
+    animation-name: animateBlobs;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animateBlobs {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 60%;
+        transform: scale(2) rotate(0deg) translate(10%, 10%);
+    }
+    100% {
+        border-radius: 88% 10% 22% 58% / 73% 56% 34% 77%;
+        transform: scale(2) rotate(180deg) translate(10%, -10%);
+    }
+}
+
+.gradientColor:nth-of-type(1) {
+    background-color: #286ce2;
+    animation-direction: backwards;
+}
+
+.gradientColor:nth-of-type(2) {
+    background-color: #00739a;
+}
+
+.gradientColor:nth-of-type(3) {
+    background-color: #1a3673;
+    animation-direction: backwards;
+}
+
+.gradientColor:nth-of-type(4) {
+    background-color: #286ce2;
+}
+
+.gradientBackdrop {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent;
+    backdrop-filter: blur(120px);
+}
+
+.mastheadContent {
+    max-width: 600px;
+    color: #fff;
+    z-index: 1;
+}
+
+.mastheadContent h1 {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 16px; /* 16px gap to p */
+}
+
+.mastheadContent p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px; /* 32px gap to buttons */
+}
+
+.ctaButtons {
+    display: flex;
+}
+
+.ctaButtons button + button {
+    margin-left: 12px;
+}
+
+.getStartedBtn {
+    width: 190px;
+    height: 44px;
+    padding: 8px 16px;
+    background: #fff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 14px;
+}
+
+.componentsBtn {
+    width: 190px;
+    height: 44px;
+    padding: 8px 16px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* -------------------------
+   SMALL SCREENS (<768px)
+   ------------------------- */
+@media (max-width: 768px) {
+
+    .mastheadContent {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .mastheadContent h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .mastheadContent p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* remove left margin, add top margin for the second button */
+    .ctaButtons button + button {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+    .getStartedBtn {
+        margin: 0 0 22px 0;
+    }
+}

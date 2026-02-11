@@ -1,0 +1,145 @@
+.checkbox {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--primitives-spacing-2);       /* checkbox/padding/gap */
+    color: var(--semantic-text-default);
+    font-family: ElevanceSans, sans-serif;
+    font-weight: var(--primitives-anthem-font-weight-medium);
+}
+
+/* clickable row */
+.checkbox__control {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-1);       /* checkbox/padding/horizontal */
+    cursor: pointer;
+}
+
+/* the actual input (visually hidden but focusable) */
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+}
+
+/* the visual box */
+.checkbox__box {
+    box-sizing: border-box;
+    width: var(--primitives-sizing-4);      /* checkbox/border/size (square edge length) */
+    height: var(--primitives-sizing-4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: var(--primitives-sizing-4); /* we’ll override color below; this is the outline thickness if you want, but spec has size=4; see border color rules */
+    /* Reset border width to size/4? The sheet lists border/size=4 (edge length); real border width is 1px (025): */
+    border-width: var(--primitives-sizing-025); /* 1px, per checkbox/border/size FLOAT= sizing/4 (edge length handled above) */
+    border-radius: 2px;
+    background: var(--semantic-bg-unchecked-default);
+    border-color: var(--semantic-border-unchecked-default);
+}
+
+/* icon (check) */
+.checkbox__icon {
+    display: inline-block;
+    width: var(--primitives-sizing-3);      /* checkbox/icon/size/check */
+    height: var(--primitives-sizing-3);
+    color: var(--semantic-icon-default);
+    pointer-events: none;
+}
+
+/* label text */
+.checkbox__label {
+    font-weight: var(--primitives-anthem-font-weight-medium); /* checkbox/font/weight */
+    font-size: var(--primitives-font-size-base);              /* checkbox/font/size/label */
+    line-height: var(--primitives-line-height-base);          /* checkbox/font/lineHeight/label */
+}
+
+/* error message */
+.checkbox__error {
+    font-size: var(--primitives-font-size-sm);                /* checkbox/font/size/errorMessage */
+    line-height: var(--primitives-line-height-sm);            /* checkbox/font/lineHeight/errorMessage */
+    color: var(--semantic-text-errorMessage);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-1);
+}
+
+/* error icon size */
+.checkbox__error .checkbox__errorIcon {
+    width: var(--primitives-sizing-4);                        /* checkbox/icon/size/error */
+    height: var(--primitives-sizing-4);
+    color: var(--semantic-icon-error);
+}
+
+/* spacing hooks from sheet */
+.checkbox { padding-top: 0; }                               /* checkbox/padding/top/input */
+.checkbox__error { padding-top: 0; }                        /* checkbox/padding/top/errorIcon */
+
+/* ---------- STATE MAPPING (unchecked) ---------- */
+.checkbox:not(.checkbox--checked) .checkbox__box {
+    background: var(--semantic-bg-unchecked-default);
+    border-color: var(--semantic-border-unchecked-default);
+}
+
+.checkbox:not(.checkbox--checked) .checkbox__control:hover .checkbox__box {
+    background: var(--semantic-bg-unchecked-hover);
+    border-color: var(--semantic-border-unchecked-hover);
+}
+
+.checkbox:not(.checkbox--checked) .checkbox__input:focus-visible + .checkbox__box {
+    background: var(--semantic-bg-unchecked-focus);
+    border-color: var(--semantic-border-unchecked-focus);
+}
+
+.checkbox:not(.checkbox--checked).checkbox--disabled .checkbox__box {
+    background: var(--semantic-bg-unchecked-disabled);
+    border-color: var(--semantic-border-unchecked-disabled);
+    opacity: var(--primitives-opacity-30); /* checkbox/disabled */
+}
+
+.checkbox:not(.checkbox--checked).checkbox--error .checkbox__box {
+    background: var(--semantic-bg-unchecked-error);
+    border-color: var(--semantic-border-unchecked-error);
+}
+
+/* focusActive: show primary border when focused & active class present */
+.checkbox:not(.checkbox--checked).checkbox--focusActive .checkbox__box {
+    border-color: var(--semantic-border-unchecked-focusActive);
+}
+
+/* ---------- STATE MAPPING (checked) ---------- */
+.checkbox.checkbox--checked .checkbox__box {
+    background: var(--semantic-bg-checked-default);
+    border-color: var(--semantic-bg-checked-default); /* border follows bg for checked default */
+}
+
+.checkbox.checkbox--checked .checkbox__control:hover .checkbox__box {
+    background: var(--semantic-bg-checked-hover);
+    border-color: var(--semantic-bg-checked-hover);
+}
+
+.checkbox.checkbox--checked .checkbox__input:focus-visible + .checkbox__box {
+    background: var(--semantic-bg-checked-focus);
+    border-color: var(--semantic-border-checked-focus);
+}
+
+.checkbox.checkbox--checked.checkbox--disabled .checkbox__box {
+    background: var(--semantic-bg-checked-disabled);
+    border-color: var(--semantic-bg-checked-disabled);
+    opacity: var(--primitives-opacity-30);
+}
+
+.checkbox.checkbox--checked.checkbox--error .checkbox__box {
+    background: var(--semantic-bg-checked-error);
+    border-color: var(--semantic-border-unchecked-error); /* critical */
+}
+
+/* icon color mapping */
+.checkbox.checkbox--checked .checkbox__icon { color: var(--semantic-icon-default); }
+.checkbox.checkbox--checked.checkbox--error .checkbox__icon { color: var(--semantic-icon-error); }
+
+/* disabled tweaks */
+.checkbox.checkbox--disabled .checkbox__control { cursor: not-allowed; }

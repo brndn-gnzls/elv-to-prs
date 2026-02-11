@@ -1,0 +1,78 @@
+.bargraph {
+    box-sizing: border-box;
+    width: 50vw;           /* half the view as requested */
+    max-width: 100%;
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    color: var(--semantic-bg-text-standard);
+}
+
+/* common */
+.bargraph__title    { font-weight: var(--primitives-anthem-font-weight-semibold); }
+.bargraph__desc     { font-weight: var(--primitives-anthem-font-weight-medium); }
+.bargraph__number   { font-weight: var(--primitives-anthem-font-weight-semibold); }
+
+/* STANDARD */
+.bargraph--standard .bargraph__track {
+    background: var(--semantic-bg-standard-total);
+    border: var(--primitives-sizing-050) solid var(--semantic-br-standard-total);
+    border-radius: var(--primitives-border-radius-rounded-full);
+    height: var(--primitives-sizing-5); /* heightThick */
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--primitives-spacing-1);
+    padding: var(--primitives-spacing-1);
+}
+.bargraph--standard .bargraph__seg { height: 100%; border-radius: var(--primitives-border-radius-rounded-full); }
+.bargraph--standard .bargraph__seg--1 { background: var(--semantic-bg-standard-bar1); }
+.bargraph--standard .bargraph__seg--2 { background: var(--semantic-bg-standard-bar2); }
+.bargraph--standard .bargraph__seg--3 { background: var(--semantic-bg-standard-bar3); }
+.bargraph--standard .bargraph__seg--4 { background: var(--semantic-bg-standard-bar4); }
+.bargraph--standard .bargraph__seg--5 { background: var(--semantic-bg-standard-bar5); }
+
+/* TIMELINE */
+.bargraph--timeline .bargraph__track {
+    background: var(--semantic-bg-timeline-total);
+    border: var(--primitives-sizing-050) solid var(--semantic-br-timeline-total);
+    border-radius: var(--primitives-border-radius-rounded-full);
+    height: var(--primitives-sizing-5); /* horizontalBarHeight */
+    position: relative;
+    overflow: hidden;
+}
+.bargraph--timeline .bargraph__progress {
+    height: 100%;
+    background: var(--semantic-bg-timeline-progress);
+    border-radius: var(--primitives-border-radius-rounded-full);
+}
+.bargraph--timeline .bargraph__marker {
+    position: absolute;
+    top: 50%;
+    width: var(--primitives-sizing-5);
+    height: var(--primitives-sizing-11);
+    transform: translate(-50%, -50%);
+    background: var(--semantic-bg-timeline-marker);
+    border: var(--primitives-sizing-050) solid var(--semantic-br-timeline-markerBlue); /* blue marker */
+    border-radius: var(--primitives-border-radius-rounded-full);
+}
+.bargraph--timeline .bargraph__marker--gray { border-color: var(--semantic-br-timeline-markerGray); }
+
+/* MILESTONE */
+.bargraph--milestone .bargraph__track {
+    background: var(--semantic-bg-milestone-total);
+    border: var(--primitives-sizing-050) solid var(--semantic-br-milestone-total);
+    border-radius: var(--primitives-border-radius-rounded-full);
+    height: var(--primitives-sizing-5);
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--primitives-spacing-1);
+    padding: var(--primitives-spacing-1);
+}
+.bargraph--milestone .bargraph__seg { height: 100%; border-radius: var(--primitives-border-radius-rounded-full); }
+.bargraph--milestone .bargraph__seg--1 { background: var(--semantic-bg-milestone-bar1); }
+.bargraph--milestone .bargraph__seg--2 { background: var(--semantic-bg-milestone-bar2); }
+.bargraph--milestone .bargraph__seg--3 { background: var(--semantic-bg-milestone-bar3); }
+
+.bargraph--milestone .bargraph__legend { display: flex; gap: var(--primitives-spacing-2); margin-top: var(--primitives-spacing-2); }
+.bargraph--milestone .bargraph__chip { width: var(--primitives-sizing-5); height: var(--primitives-sizing-5); border-radius: var(--primitives-border-radius-rounded-full); }
+.bargraph--milestone .bargraph__chip--1 { background: var(--semantic-bg-milestone-legend1); }
+.bargraph--milestone .bargraph__chip--2 { background: var(--semantic-bg-milestone-legend2); }
+.bargraph--milestone .bargraph__chip--3 { background: var(--semantic-bg-milestone-legend3); }

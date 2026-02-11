@@ -1,0 +1,91 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-2);            /* link/padding/gap */
+    font-family: var(--primitives-anthem-font-family-member), sans-serif;
+    color: inherit;
+}
+
+/* The clickable anchor */
+.link__a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--primitives-spacing-2);            /* icon/text spacing */
+    text-decoration: none;
+    font-weight: var(--primitives-anthem-font-weight-semibold); /* link/font/weight */
+    font-size: var(--primitives-font-size-base);                /* link/font/size */
+    line-height: var(--primitives-line-height-base);            /* link/font/lineHeight */
+    outline: none;
+    border-radius: 2px;
+    padding: 0;                                  /* default; focus adds padding below */
+}
+
+/* Icon (leading/trailing) */
+.link__icon {
+    width: var(--primitives-sizing-4);           /* link/icon/size */
+    height: var(--primitives-sizing-4);
+    flex: 0 0 auto;
+    display: inline-flex;
+}
+
+/* ---------- VARIANT: internal ---------- */
+.link--internal { font-weight: 600; }
+/* resting */
+.link--internal .link__a { color: var(--semantic-link-text-primary); }
+.link--internal .link__icon { color: var(--semantic-link-icon-base); }
+
+/* hover */
+.link--internal .link__a:hover { color: var(--semantic-link-text-secondary); }
+
+/* press (active) */
+.link--internal .link__a:active { color: var(--semantic-link-text-press); }
+
+/* focus */
+.link--internal .link__a:focus-visible {
+    color: var(--semantic-link-text-primary);
+    outline: var(--primitives-sizing-025) solid var(--semantic-link-border-primary); /* width & color */
+    padding: var(--primitives-spacing-025) var(--primitives-spacing-1);             /* focus padding */
+}
+
+/* disabled (opacity spec) */
+.link--internal.link--disabled { opacity: var(--primitives-opacity-30); pointer-events: none; }
+
+/* ---------- VARIANT: external (same mapping as internal for text/icon, separate border token) ---------- */
+.link--external .link__a { color: var(--semantic-link-text-primary); }
+.link--external .link__icon { color: var(--semantic-link-icon-base); }
+.link--external .link__a:hover { color: var(--semantic-link-text-secondary); }
+.link--external .link__a:active { color: var(--semantic-link-text-press); }
+.link--external .link__a:focus-visible {
+    color: var(--semantic-link-text-primary);
+    outline: var(--primitives-sizing-025) solid var(--semantic-link-border-primary);
+    padding: var(--primitives-spacing-025) var(--primitives-spacing-1);
+}
+.link--external.link--disabled { opacity: var(--primitives-opacity-30); pointer-events: none; }
+
+/* ---------- VARIANT: inline (same text mapping as internal) ---------- */
+.link--inline .link__a { color: var(--semantic-link-text-primary); }
+.link--inline .link__a:hover { color: var(--semantic-link-text-secondary); }
+.link--inline .link__a:active { color: var(--semantic-link-text-press); }
+.link--inline .link__a:focus-visible {
+    color: var(--semantic-link-text-primary);
+    outline: var(--primitives-sizing-025) solid var(--semantic-link-border-primary);
+    padding: var(--primitives-spacing-025) var(--primitives-spacing-1);
+}
+.link--inline .link__icon { color: var(--semantic-link-icon-base); }
+.link--inline.link--disabled { opacity: var(--primitives-opacity-30); pointer-events: none; }
+
+/* ---------- VARIANT: white ---------- */
+/* text is always white across states per sheet */
+.link--white .link__a,
+.link--white .link__a:hover,
+.link--white .link__a:active,
+.link--white .link__a:focus-visible {
+    color: var(--semantic-link-text-white);
+}
+.link--white .link__a:focus-visible {
+    outline: var(--primitives-sizing-025) solid var(--semantic-link-border-white);
+    padding: var(--primitives-spacing-025) var(--primitives-spacing-1);
+}
+/* icons always white for this variant */
+.link--white .link__icon { color: var(--semantic-link-icon-white); }
+.link--white.link--disabled { opacity: var(--primitives-opacity-30); pointer-events: none; }

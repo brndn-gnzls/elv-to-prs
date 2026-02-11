@@ -1,0 +1,20 @@
+/* src/components/TestList/TestList.css */
+
+.test-list {
+    list-style: none;
+    padding: 0;
+}
+
+.test-list-item {
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.test-item-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
