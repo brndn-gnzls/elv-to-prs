@@ -1,6 +1,6 @@
 ## Storybook Design Tokens Setup (Storybook 10)
 
-This doc summarizes the changes made to support Storybook 10 + `storybook-design-token` v5, the per‑component token display, and the control fixes.
+This document summarizes the changes made to support Storybook 10 + `storybook-design-token` v5, the per‑component token display, and the control fixes.
 
 ## Overview
 
